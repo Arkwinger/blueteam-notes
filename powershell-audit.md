@@ -37,4 +37,4 @@ WINWORD.EXE → powershell.exe → whoami
 # looped through PowerShell logs for 2 hours, forgot to save query
 Get-WinEvent -FilterHashtable @{LogName='Microsoft-Windows-PowerShell/Operational'; ID=4104}
 
-# decoded a string and it just said "you've been owned" 💀
+# decoded a string and it just said "you've been owned" 
