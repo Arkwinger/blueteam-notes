@@ -64,14 +64,14 @@ EventID 12
 `Sysmon Event ID 6 `- Driver loaded: A potential flag for BYOD (bring your own driver) attacks, though this is less common. Before diving deep into this, let's weed out more conspicuous threats first.
 
 `Sysmon Event ID 7 `- Image loaded: Allows us to track dll loads, which is handy in detecting DLL hijacks.
-`
+
 `Sysmon Event ID 8 `- CreateRemoteThread: Potentially aids in identifying injected threads. While remote threads can be created legitimately, if an attacker misuses this API, we can potentially trace their rogue process and what they injected into.
 
 `Sysmon Event ID 10 `- ProcessAccess: Useful for spotting remote code injection and memory dumping, as it records when handles on processes are made.
 
 `Sysmon Event ID 11 `- FileCreate: With many files being created frequently due to updates, downloads, etc., it might be challenging to aim our hunt directly here. However, these events can be beneficial in correlating or identifying a file's origins later.
 
-`Sysmon Event ID 12 `- RegistryEvent (Object create and delete) & Sysmon Event ID 13 - RegistryEvent (Value Set): While numerous events take place here, many registry events can be malicious, and with a good idea of what to look for, hunting here can be fruitful.
+`Sysmon Event ID 12 `- RegistryEvent (Object create and delete) & `Sysmon Event ID 13` - RegistryEvent (Value Set): While numerous events take place here, many registry events can be malicious, and with a good idea of what to look for, hunting here can be fruitful.
 
 `Sysmon Event ID 15 `- FileCreateStreamHash: Relates to file streams and the "Mark of the Web" pertaining to external downloads, but we'll leave this aside for now.
 
